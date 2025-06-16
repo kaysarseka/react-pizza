@@ -1,0 +1,82 @@
+.head {
+  padding: 40px 20px;
+
+  h1 {
+    margin-left: 70px;
+    font-size: clamp(28px, 5vw, 48px);
+  }
+}
+
+.pizza {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  justify-items: center;
+  padding: 20px;
+  .piz{
+    width: 240px;
+    position: relative;
+  }
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 980px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: repeat(1, 1fr);
+    .piz{
+      width: 80%;
+      img{
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+.add {
+  padding: 20px;
+  button {
+    position: absolute;
+    border: none;
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #4f46e5; // синий (можно заменить на любой)
+    color: #ffffff;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+      background-color: #4338ca;
+      transform: translateY(-2px);
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+}
+
+.favorite-icon {
+  cursor: pointer;
+  font-size: 24px;
+  position: absolute;
+  bottom: 3%;
+  left: 12%;
+  transition: color 0.3s ease;
+
+  &.active {
+    color: red;
+  }
+
+  &.inactive {
+    color: rgba(0, 0, 0, 0.25);
+  }
+}
