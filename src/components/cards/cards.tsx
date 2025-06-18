@@ -4,7 +4,7 @@ import "./cards.scss";
 import { useCart } from "../../context/BasketContext";
 import { useFavorites } from "../../context/FavoritesContext";
 import { HeartOutlined, HeartFilled } from "@ant-design/icons";
-import React from "react";
+
 
 const { Meta } = Card;
 
@@ -116,7 +116,7 @@ const pizzas: dataT[] = [
 ];
 
 export const Cards = () => {
-  const [data] = useState<dataT[]>(pizzas); // ← напрямую используем локальный массив
+  const [data] = useState<dataT[]>(pizzas);
   const { addToCart } = useCart();
   const { toggleFavorite, isFavorite } = useFavorites();
 

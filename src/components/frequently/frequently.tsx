@@ -1,7 +1,7 @@
 import { Carousel, Col, Row } from "antd";
 import { useEffect, useState } from "react";
 import "./frequently.scss";
-import React from "react";
+
 
 interface PizzasTypes {
   id: number;
